@@ -4,7 +4,7 @@ export default function About() {
       <div className="section-head"><span className="num mono">01</span><h2>About</h2></div>
       <div className="about-text">
         <p>
-          I'm a self-taught full-stack developer who paired my engineering degree with
+          I'm a full-stack developer who paired my engineering degree with
           hands-on MERN stack practice. I like taking a problem apart — database, backend
           logic, interface — understanding every layer, then putting it back together as
           something people can actually use.

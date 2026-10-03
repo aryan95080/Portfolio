@@ -8,9 +8,9 @@ import Project from "./models/Project.js";
 
 const projects = [
   {
-    title: "Nitam — Clothing Shopping App",
+    title: "Ramitra — Clothing Shopping App",
     description:
-      "A full-stack e-commerce platform for browsing and buying clothes, built solo end to end — from product catalog to a secure checkout flow. 'Nitam' stands for New Innovation in Trends, Aesthetics, and Market.",
+      "A full-stack e-commerce platform for browsing and buying clothes, built solo end to end — from product catalog to a secure checkout flow. 'Ramitra' stands for Refined Aesthetics with Modern Innovation & Timeless Regality in Apparel.",
     techStack: [
       "React",
       "Node.js",
@@ -24,8 +24,8 @@ const projects = [
       "Secure JWT + bcrypt authentication, cutting login time by 30%",
       "UI/UX refinements that lifted daily user interactions by 40%",
     ],
-    liveDemoUrl: "",
-    githubUrl: "",
+    liveDemoUrl: "https://ramitra-shopping.onrender.com",
+    githubUrl: "https://github.com/aryan95080/Ramitra-Shopping",
     startDate: "Mar 2024",
     endDate: "May 2024",
     order: 1,
@@ -48,8 +48,8 @@ const projects = [
       "Razorpay integration for secure online payments during booking",
       "Cloudinary-backed uploads and Context API for shared state",
     ],
-    liveDemoUrl: "",
-    githubUrl: "",
+    liveDemoUrl: "https://pulse-meet.onrender.com",
+    githubUrl: "https://github.com/aryan95080/Pulse-Meet",
     startDate: "May 2024",
     endDate: "Aug 2024",
     order: 2,

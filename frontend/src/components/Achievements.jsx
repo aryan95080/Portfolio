@@ -1,5 +1,5 @@
 const CODE_PROFILES = [
-  { platform: "LEETCODE", count: "350+", url: "https://leetcode.com/u/Aryan478_143/" },
+  { platform: "LEETCODE", count: "450+", url: "https://leetcode.com/u/Aryan478_143/" },
   { platform: "GEEKSFORGEEKS", count: "100+", url: "https://www.geeksforgeeks.org/profile/amitaryue2l?from=edit&tab=activity" },
   { platform: "CODING NINJAS", count: "50+", url: "https://www.naukri.com/code360/profile/akaryan" },
 ];
@@ -16,6 +16,7 @@ export default function Achievements() {
           <p>
             Represented LNCT College at Smart India Hackathon in Bhopal, where our team built
             an IV Fluid Monitoring System and placed first among more than 1,000 competing teams.
+            I'm also part of idealab of lnct college and I have also won many hackathons and coding competitions in my college and outside of my college.
           </p>
         </div>
       </div>

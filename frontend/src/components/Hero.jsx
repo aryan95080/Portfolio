@@ -22,11 +22,11 @@ export default function Hero() {
         <div className="info-card">
           <div className="tag mono">EDUCATION</div>
           <div className="big">B.Tech · ECE</div>
-          <div className="sub">LNCT College, Bhopal — 7.03 CGPA</div>
+          <div className="sub">LNCT College, Bhopal — 7.45 CGPA</div>
         </div>
         <div className="info-card">
           <div className="tag mono">DSA PRACTICE</div>
-          <div className="big">500+ Problems</div>
+          <div className="big">600+ Problems</div>
           <div className="sub">LeetCode · GFG · Coding Ninjas</div>
         </div>
       </div>

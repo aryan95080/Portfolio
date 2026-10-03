@@ -1,17 +1,57 @@
 import { useEffect, useState } from "react";
 import { fetchProjects } from "../api";
 
+const defaultProjects = [
+  {
+    title: "Ramitra — Clothing Shopping App",
+    description:
+      "A full-stack e-commerce platform for browsing and buying clothes, built solo end to end — from product catalog to a secure checkout flow. 'Ramitra' stands for Refined Aesthetics with Modern Innovation & Timeless Regality in Apparel.",
+    techStack: ["React", "Node.js", "Express", "MongoDB", "JWT", "bcrypt"],
+    highlights: [
+      "Product catalog, cart, and full order flow",
+      "Secure JWT + bcrypt authentication, cutting login time by 30%",
+      "UI/UX refinements that lifted daily user interactions by 40%",
+    ],
+    liveDemoUrl: "https://ramitra-shopping.onrender.com",
+    githubUrl: "https://github.com/aryan95080/Ramitra-Shopping",
+    startDate: "Mar 2024",
+    endDate: "May 2024",
+    order: 1,
+  },
+  {
+    title: "Pulse + Meet — Doctor Appointment App",
+    description:
+      "A full-stack appointment booking system for patients, doctors, and admins — each with their own dashboard — covering booking, payments, and profile management.",
+    techStack: ["React", "Node.js", "Express", "MongoDB", "Razorpay", "Cloudinary", "JWT"],
+    highlights: [
+      "Role-based access control for patients, doctors, and admins",
+      "Razorpay integration for secure online payments during booking",
+      "Cloudinary-backed uploads and Context API for shared state",
+    ],
+    liveDemoUrl: "https://pulse-meet.onrender.com",
+    githubUrl: "https://github.com/aryan95080/Pulse-Meet",
+    startDate: "May 2024",
+    endDate: "Aug 2024",
+    order: 2,
+  },
+];
+
 export default function Projects() {
   const [projects, setProjects] = useState([]);
-  const [status, setStatus] = useState("loading"); // loading | ready | error
+  const [status, setStatus] = useState("loading"); // loading | ready
 
   useEffect(() => {
     fetchProjects()
       .then((data) => {
-        setProjects(data);
+        // Use database data if available, otherwise fall back to defaults
+        setProjects(Array.isArray(data) && data.length > 0 ? data : defaultProjects);
         setStatus("ready");
       })
-      .catch(() => setStatus("error"));
+      .catch(() => {
+        // API or database unreachable: show defaults instead of an error
+        setProjects(defaultProjects);
+        setStatus("ready");
+      });
   }, []);
 
   return (
@@ -20,23 +60,9 @@ export default function Projects() {
 
       {status === "loading" && <p className="proj-desc">Loading projects…</p>}
 
-      {status === "error" && (
-        <p className="proj-desc">
-          Couldn't load projects from the API. Make sure the backend server is running and
-          the database has been seeded (<code>npm run seed</code> in <code>/backend</code>).
-        </p>
-      )}
-
-      {status === "ready" && projects.length === 0 && (
-        <p className="proj-desc">
-          No projects in the database yet. Run <code>npm run seed</code> in <code>/backend</code>
-          to add the starter projects.
-        </p>
-      )}
-
       {status === "ready" &&
         projects.map((p) => (
-          <article className="proj-card" key={p._id}>
+          <article className="proj-card" key={p._id || p.title}>
             <div className="proj-top">
               <h3>{p.title}</h3>
               <span className="dates mono">{p.startDate} – {p.endDate}</span>
