@@ -4,10 +4,10 @@ export default function Hero() {
       <div className="kicker mono">&lt;/&gt; hello, I'm</div>
       <h1>Amit Kumar</h1>
       <p className="lede">
-        A final-year B.Tech (Electronics &amp; Communication) student from Bihar, studying at
-        LNCT College, Bhopal — I build complete web products end to end using the MERN stack,
-        backed by a strong grip on Data Structures &amp; Algorithms.
-      </p>
+  I'm Amit, a full-stack developer from Bihar. I graduated in 2026 with a B.Tech in
+  Electronics &amp; Communication from LNCT College, Bhopal, and I turn ideas into complete
+  web apps using the MERN stack, with solid Data Structures &amp; Algorithms behind every build.
+</p>
       <div className="cta-row">
         <a className="btn btn-primary" href="#projects">See my work</a>
         <a className="btn btn-line" href="#contact">Contact me</a>
