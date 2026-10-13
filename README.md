@@ -1,6 +1,6 @@
 # Amit Kumar — MERN Stack Portfolio
 
-**Live demo:** [https://my-portfolio-jfbg.onrender.com](https://my-portfolio-jfbg.onrender.com)
+**Live demo:** [https://my-portfolio-jfbg.onrender.com](https://portfolio-g8un.onrender.com)
 
 A full-stack developer portfolio built on the MERN stack — **M**ongoDB, **E**xpress, **R**eact, **N**ode.js. Project data is stored in a real database and served through a REST API, rather than hardcoded into the frontend, so content can be updated without touching the UI code.
 
